@@ -11,6 +11,24 @@ form.addEventListener('submit', async function(e){
     }
     else{
         alert(searchData)
+
+        await fetch('https://backendexpert.github.io/VRS-System-JSON/VRSuserData.json')
+        .then(res => {
+            if(!res.ok){
+                throw new Error ('Not work not ok')
+            }
+            return res.json()
+        })
+
+        .then(data => {
+            // console.log(data[3].email)
+            
+            
+        })
+
+        .catch(error => {
+            console.error("Error fetch data", error)
+        })
     }
 
 })
