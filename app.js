@@ -12,7 +12,7 @@ form.addEventListener('submit', async function(e){
     else{
         alert(searchData)
 
-        await fetch('https://backendexpert.github.io/VRS-System-JSON/VRSuserData.json')
+        await fetch('https://backendexpert.github.io/Google-Sheet-To-API/data.json')
         .then(res => {
             if(!res.ok){
                 throw new Error ('Not work not ok')
@@ -23,10 +23,10 @@ form.addEventListener('submit', async function(e){
         .then(data => {
             // console.log(data[3].email)
             
-            const result = data.find(item => item.username.toLowerCase() === searchData.toLowerCase())
+            const result = data.find(item => item.Name.toLowerCase() === searchData.toLowerCase())
         
             if(result) {
-                document.getElementById('results').textContent = `Name : ${result.username}, Email : ${result.email}`
+                document.getElementById('results').textContent = `ID: ${result.ID}, Name : ${result.Name}, Email : ${result.Email}, mobile: ${result.mobile}, Address: ${result.Address}, Date of Birth: ${result.DOB}`
             }
             else{
                 document.getElementById('results').textContent = 'Username Not Found in API'
