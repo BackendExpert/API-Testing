@@ -26,7 +26,7 @@ form.addEventListener('submit', async function(e){
             const result = data.find(item => item.Name.toLowerCase() === searchData.toLowerCase())
         
             if(result) {
-                document.getElementById('results').textContent = `ID: ${result.ID}, Name : ${result.Name}, Email : ${result.Email}, mobile: ${result.mobile}, Address: ${result.Address}, Date of Birth: ${result.DOB}`
+                document.getElementById('results').textContent = `ID: ${result.ID}, Name : ${result.Name}, Email : ${result.Email }, mobile: ${result.mobile}, Address: ${result.Address}, Date of Birth: ${result.DOB}`
             }
             else{
                 document.getElementById('results').textContent = 'Username Not Found in API'
