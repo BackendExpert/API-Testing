@@ -23,7 +23,7 @@ form.addEventListener('submit', async function(e){
         .then(data => {
             // console.log(data[3].email)
             
-            
+            const result = data.find(item => item.username.toLowerCase() === searchData.toLowerCase())
         })
 
         .catch(error => {
