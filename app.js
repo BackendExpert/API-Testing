@@ -1,3 +1,7 @@
-const searchData = document.getElementById('searchForm')
+const searchData = document.getElementById('searchQuery')
 
-alert(searchData)
+form.addEventListener('submit', async function(e) {
+    e.prpreventDefault()
+
+    // get data in input feild
+})
