@@ -1,1 +1,3 @@
-const searchData = document.getElementById()
+const searchData = document.getElementById('searchForm')
+
+alert(searchData)
