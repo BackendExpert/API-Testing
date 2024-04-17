@@ -1,13 +1,12 @@
-const form = document.getElementById('searchQuery')
+const form = document.getElementById('searchForm');
 
-form.addEventListener('submit', async function(e) {
-    e.prpreventDefault()
+form.addEventListener('submit', async function(e){
+    e.preventDefault()
 
-    // get data in input feild
+    // get value of input
+    const searchData = document.forms['FormSearch']['searchQuery'].value;
 
-    const dataSearch = document.forms['FormSearch']['searchQuery'].value;
-
-    if(dataSearch === ""){
-        alert(dataSearch)
+    if(searchData === ""){
+        alert("Enter Value")
     }
 })
